@@ -6,6 +6,8 @@
 </template>
 
 <script setup>
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Nav from "./components/NavComponent.vue";
 </script>
 
@@ -14,7 +16,6 @@ import Nav from "./components/NavComponent.vue";
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 </style>

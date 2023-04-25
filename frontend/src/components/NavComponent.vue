@@ -1,26 +1,12 @@
 <template>
-    <nav>
-        <template v-if="!authStore.user">
-            <li>
-                <router-link
-                    :to="{ name: 'login' }"
-                >Login</router-link
-                >
-            </li>
-            <li>
-                <router-link
-                    :to="{ name: 'registration' }"
-                >Register</router-link
-                >
-            </li>
-        </template>
-        <template v-else>
-            <button>
-<!--                @click="authStore.handleLogout"-->
-                Logout
-            </button>
-        </template>
-    </nav>
+    <b-navbar toggleable type="dark" variant="dark">
+
+        <div >
+            <b-navbar-brand href="/login">Login</b-navbar-brand>
+            <b-navbar-brand href="/registration">Sing up</b-navbar-brand>
+        </div>
+
+    </b-navbar>
 </template>
 
 <script>
