@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import AuthStore from "../store/auth.js";
+import AuthStore from "@/store/auth.js";
 
 
 

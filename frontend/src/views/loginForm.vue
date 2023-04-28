@@ -1,7 +1,7 @@
 <template>
     <div class="login">
         <meta name="csrf-token" :content="csrfToken">
-        <b-form @submit.prevent="handleLogin()" v-if="show">
+        <b-form @submit.prevent="loginForm()" v-if="show">
             <b-form-group
                 id="input-group-1"
                 label="Email address:"
@@ -51,19 +51,9 @@ export default {
         }
     },
     methods: {
-        handleLogin(){
-            this.$store.state.AuthStore.handleLogin(form);
+        loginForm: function () {
+            this.$store.dispatch('AuthStore/handleLogin', this.form);
         }
-        // async handleLogin() {
-        //     await axios.post('/login', {
-        //         email: this.form.email,
-        //         password: this.form.password,
-        //
-        //     });
-        // },
-    },
-    created(){
-        console.log(this.$store.state.authErrors)
     },
     async mounted() {
         const response = await axios.get('/csrf-token');
